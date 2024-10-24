@@ -6,7 +6,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 const apiKey = "d2bca50aae3f59e7f77d80349c07b83d05161d3c445e3cc39137b2c3d16d3998";
-
+app.get("/",(req,res)=>{
+    res.send('Working');
+})
 app.post("/search", async (req,res)=>{
     console.log(req.body);
     const frontend_data = req.body;
